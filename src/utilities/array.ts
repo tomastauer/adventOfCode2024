@@ -126,3 +126,7 @@ export function get4Adjacent(x: number, y: number) {
 export function get4AdjacentDirections() {
 	return [{ x: -1, y: 0 }, { x: 1, y: 0 }, { x: 0, y: -1 }, { x: 0, y: 1 }];
 }
+
+export function cloneGrid<T>(input: T[][]): T[][] {
+	return input.map((i) => [...i]);
+}
