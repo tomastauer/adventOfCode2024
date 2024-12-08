@@ -130,3 +130,7 @@ export function get4AdjacentDirections() {
 export function cloneGrid<T>(input: T[][]): T[][] {
 	return input.map((i) => [...i]);
 }
+
+export function isWithinBoundaries(input: unknown[][], x: number, y: number) {
+	return y >= 0 && y < input.length && x >= 0 && x < input[0].length;
+}
