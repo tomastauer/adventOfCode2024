@@ -46,7 +46,7 @@ export function addBorder<T>(
 ): T[][] {
 	const result: T[][] = [];
 	for (let y = 0; y < array.length + borderWidth * 2; y++) {
-		const line = [];
+		const line: T[] = [];
 
 		for (let x = 0; x < array[0].length + borderWidth * 2; x++) {
 			if (
@@ -67,7 +67,7 @@ export function addBorder<T>(
 export function removeBorder<T>(array: T[][], borderWidth = 1): T[][] {
 	const result: T[][] = [];
 	for (let y = 0; y < array.length - borderWidth * 2; y++) {
-		const line = [];
+		const line: T[] = [];
 
 		for (let x = 0; x < array[0].length - borderWidth * 2; x++) {
 			line.push(array[y + borderWidth][x + borderWidth]);
@@ -110,7 +110,7 @@ export function partitionBy<T>(
 
 export function print(array: string[][]) {
 	for (let y = 0; y < array.length; y++) {
-		const line = [];
+		const line: string[] = [];
 		for (let x = 0; x < array[y].length; x++) {
 			line.push(array[y][x]);
 		}
