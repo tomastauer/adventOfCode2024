@@ -45,8 +45,7 @@ export default class Day01 implements Solution {
 
 	solvePart2(input: string[]) {
 		return this.solve(input).reduce(
-			(agg, curr) =>
-				agg + Array.from(curr.values()).reduce((a, c) => a + c),
+			(agg, curr) => agg + Array.from(curr.values()).reduce((a, c) => a + c),
 			0,
 		);
 	}

@@ -49,9 +49,7 @@ export default class Day01 implements Solution {
 			const [result, rest] = i.split(':');
 			return {
 				result: parseInt(result),
-				numbers: rest.split(' ').filter(Boolean).map((r) =>
-					parseInt(r)
-				),
+				numbers: rest.split(' ').filter(Boolean).map((r) => parseInt(r)),
 			};
 		});
 
@@ -64,9 +62,7 @@ export default class Day01 implements Solution {
 			const [result, rest] = i.split(':');
 			return {
 				result: parseInt(result),
-				numbers: rest.split(' ').filter(Boolean).map((r) =>
-					parseInt(r)
-				),
+				numbers: rest.split(' ').filter(Boolean).map((r) => parseInt(r)),
 			};
 		});
 

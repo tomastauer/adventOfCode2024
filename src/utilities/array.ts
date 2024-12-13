@@ -85,9 +85,7 @@ export function makePairs<T>(array: T[]): [T, T][] {
 }
 
 export function makeGrid<T>(height: number, width: number, fill?: T): T[][] {
-	return new Array(height).fill(0).map(() =>
-		new Array(width).fill(fill ?? 0)
-	);
+	return new Array(height).fill(0).map(() => new Array(width).fill(fill ?? 0));
 }
 
 export function partitionBy<T>(

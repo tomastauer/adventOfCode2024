@@ -81,9 +81,7 @@ export default class Day01 implements Solution {
 				break;
 			}
 
-			const fileToCompressIndex = parsed.findIndex((p) =>
-				p.id === fileId
-			)!;
+			const fileToCompressIndex = parsed.findIndex((p) => p.id === fileId)!;
 
 			fileId--;
 

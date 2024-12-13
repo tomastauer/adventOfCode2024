@@ -15,9 +15,7 @@ export default class Day01 implements Solution {
 			ruleMap.set(a, [...ruleMap.get(a) ?? [], b]);
 		});
 
-		const result = pages.split('\n').map((p) =>
-			p.split(',').map((q) => parseInt(q))
-		).filter((page) => {
+		const result = pages.split('\n').map((p) => p.split(',').map((q) => parseInt(q))).filter((page) => {
 			const before: number[] = [];
 			let isValid = true;
 

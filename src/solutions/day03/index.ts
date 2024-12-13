@@ -6,8 +6,7 @@ export default class Day01 implements Solution {
 			acc + Array.from(
 				curr.matchAll(/mul\((?<a>\d{1,3}),(?<b>\d{1,3})\)/gm),
 			).reduce(
-				(acc, { groups }) =>
-					acc + parseInt(groups!['a']) * parseInt(groups!['b']),
+				(acc, { groups }) => acc + parseInt(groups!['a']) * parseInt(groups!['b']),
 				0,
 			), 0);
 	}

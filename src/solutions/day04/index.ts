@@ -63,9 +63,7 @@ export default class Day01 implements Solution {
 		for (let r = 0; r < map.length; r++) {
 			for (let c = 0; c < map[r].length; c++) {
 				if (map[r][c] === 'X') {
-					foundWords += directions.map((d) =>
-						this.check(map, r, c, d, 'M')
-					).filter(Boolean).length;
+					foundWords += directions.map((d) => this.check(map, r, c, d, 'M')).filter(Boolean).length;
 				}
 			}
 		}
