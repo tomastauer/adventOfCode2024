@@ -132,3 +132,7 @@ export function cloneGrid<T>(input: T[][]): T[][] {
 export function isWithinBoundaries(input: unknown[][], x: number, y: number) {
 	return y >= 0 && y < input.length && x >= 0 && x < input[0].length;
 }
+
+export function makeUnique<T>(input: T[]): T[] {
+	return Array.from(new Set(input.map((i) => JSON.stringify(i)))).map((i) => JSON.parse(i));
+}
