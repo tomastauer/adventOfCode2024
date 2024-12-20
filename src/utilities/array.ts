@@ -106,11 +106,11 @@ export function partitionBy<T>(
 	return [partitionOne, partitionTwo];
 }
 
-export function print<T>(array: T[][]) {
+export function print<T>(array: T[][], pad?: number) {
 	for (let y = 0; y < array.length; y++) {
 		const line: string[] = [];
 		for (let x = 0; x < array[y].length; x++) {
-			line.push(String(array[y][x]));
+			line.push(String(array[y][x]).padStart(pad ?? 0, ' '));
 		}
 
 		console.log(line.join(''));
